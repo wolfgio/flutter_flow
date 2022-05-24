@@ -1,10 +1,10 @@
-import 'package:flutter_flow/core/entities/inference.dart';
-import 'package:flutter_flow/core/entities/inference_payload.dart';
-import 'package:flutter_flow/core/entities/model_download_payload.dart';
-import 'package:flutter_flow/core/entities/model_download_response.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'flutter_flow_method_channel.dart';
+import 'core/entities/inference.dart';
+import 'core/entities/inference_payload.dart';
+import 'core/entities/model_download_payload.dart';
+import 'core/entities/model_download_response.dart';
 
 abstract class FlutterFlowPlatform extends PlatformInterface {
   /// Constructs a FlutterFlowPlatform.
