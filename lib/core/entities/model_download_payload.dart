@@ -1,4 +1,4 @@
-import 'package:flutter_flow/core/enums/model_download_strategies.dart';
+import '../enums/model_download_strategies.dart';
 
 class ModelDownloadPayload {
   final String model;

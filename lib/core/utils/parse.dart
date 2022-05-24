@@ -1,9 +1,9 @@
 import 'dart:ui';
 
-import 'package:flutter_flow/core/entities/inference.dart';
-import 'package:flutter_flow/core/entities/inference_payload.dart';
-import 'package:flutter_flow/core/entities/model_download_payload.dart';
-import 'package:flutter_flow/core/entities/model_download_response.dart';
+import '../entities/inference.dart';
+import '../entities/inference_payload.dart';
+import '../entities/model_download_payload.dart';
+import '../entities/model_download_response.dart';
 
 class ParseUtils {
   static Iterable<Inference> parseInferenceResponse(dynamic nativePayload) {
@@ -47,6 +47,7 @@ class ParseUtils {
       'type': payload.type.string,
       'source': payload.source.string,
       'model': payload.model,
+      'strategy': payload.inferenceStrategy.string,
     };
   }
 
