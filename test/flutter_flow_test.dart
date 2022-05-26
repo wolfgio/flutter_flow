@@ -1,5 +1,3 @@
-import 'package:flutter_flow/core/entities/model_download_response.dart';
-import 'package:flutter_flow/core/entities/model_download_payload.dart';
 import 'package:flutter_flow/core/entities/inference_payload.dart';
 import 'package:flutter_flow/core/entities/inference.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -11,12 +9,6 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockFlutterFlowPlatform with MockPlatformInterfaceMixin implements FlutterFlowPlatform {
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
-
-  @override
-  Future<ModelDownloadResponse> downloadModel(ModelDownloadPayload payload) {
-    // TODO: implement downloadModel
-    throw UnimplementedError();
-  }
 
   @override
   Future<Iterable<Inference>> runInference(InferencePayload payload) {

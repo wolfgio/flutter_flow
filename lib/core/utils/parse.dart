@@ -2,8 +2,6 @@ import 'dart:ui';
 
 import '../entities/inference.dart';
 import '../entities/inference_payload.dart';
-import '../entities/model_download_payload.dart';
-import '../entities/model_download_response.dart';
 
 class ParseUtils {
   static Iterable<Inference> parseInferenceResponse(dynamic nativePayload) {
@@ -32,29 +30,11 @@ class ParseUtils {
     });
   }
 
-  static ModelDownloadResponse parseModelDownloadResponse(dynamic nativePayload) {
-    return ModelDownloadResponse(
-      name: nativePayload['name'] as String,
-      downloadDate: DateTime.fromMillisecondsSinceEpoch(
-        (nativePayload['downloadDate'] as num).toInt(),
-      ),
-      success: nativePayload['success'],
-    );
-  }
-
   static Map<String, dynamic> parseInferencePayload(InferencePayload payload) {
     return {
       'type': payload.type.string,
-      'source': payload.source.string,
       'model': payload.model,
       'strategy': payload.inferenceStrategy.string,
-    };
-  }
-
-  static Map<String, dynamic> parseModelDownloadPayload(ModelDownloadPayload payload) {
-    return {
-      'model': payload.model,
-      'strategy': payload.stategy.string,
     };
   }
 }

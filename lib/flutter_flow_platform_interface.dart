@@ -3,8 +3,6 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'flutter_flow_method_channel.dart';
 import 'core/entities/inference.dart';
 import 'core/entities/inference_payload.dart';
-import 'core/entities/model_download_payload.dart';
-import 'core/entities/model_download_response.dart';
 
 abstract class FlutterFlowPlatform extends PlatformInterface {
   /// Constructs a FlutterFlowPlatform.
@@ -33,9 +31,5 @@ abstract class FlutterFlowPlatform extends PlatformInterface {
 
   Future<Iterable<Inference>> runInference(InferencePayload payload) {
     throw UnimplementedError('runInference() has not been implemented');
-  }
-
-  Future<ModelDownloadResponse> downloadModel(ModelDownloadPayload payload) {
-    throw UnimplementedError('downloadModel() has not been implemented');
   }
 }
